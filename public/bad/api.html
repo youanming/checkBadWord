@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <title>敏感词检测</title>
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <style type="text/css">
+		body{text-align: center;margin-top: 200px}
+        body span{text-align: center;display: block;margin-bottom: 20px}
+        .text{width: 300px;padding: 10px;}
+        .check{text-align: center;padding: 8px;}
+    </style>
+    
+</head>
+
+<body>
+    <form action="http://demo.fpc.cc/api/check" method="post">
+        <span>RESTFul API风格</span>
+        输入你要检测的内容：<input placeholder="如：习大大真伟大" name="content" type="text" class="text"  id='name1' value=""/>
+        <button type="submit" class="check">检测</button>
+    </form>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

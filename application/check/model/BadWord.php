@@ -2,7 +2,6 @@
 /**
  * Time: 2018/6/22 18:16
  * Created by 镜像猫工
- * Copyright by XiaoDuo Game
  */
 
 namespace app\check\model;
