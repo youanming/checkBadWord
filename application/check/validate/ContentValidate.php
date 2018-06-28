@@ -5,7 +5,7 @@
  * Copyright by XiaoDuo Game
  */
 
-namespace app\api\validate;
+namespace app\check\validate;
 
 
 class ContentValidate extends BaseValidate

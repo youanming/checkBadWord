@@ -5,7 +5,7 @@
  * Copyright by XiaoDuo Game
  */
 
-namespace app\api\model;
+namespace app\check\model;
 
 
 use think\Cache;
@@ -14,6 +14,7 @@ use think\Model;
 class BadWord extends Model
 {
     public static function getBadWord() {
+        // 使用了Redis缓存
         $badWord = Cache::get('bad_word');
         if ($badWord) {
             return $badWord;

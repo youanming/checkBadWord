@@ -6,7 +6,7 @@
  * Time: 10:27
  */
 
-namespace app\api\validate;
+namespace app\check\validate;
 
 
 class PagingParameter extends BaseValidate

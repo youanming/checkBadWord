@@ -11,4 +11,6 @@
 
 use think\Route;
 
-Route::post('check', 'api/BadWord/check');
+Route::post('html/check', 'check/BadWord/check');
+Route::post('api/check', 'api/BadWord/check');
+//Route::get('api/check', 'api/BadWord/check');

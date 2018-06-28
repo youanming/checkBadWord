@@ -5,10 +5,9 @@
  * Copyright by XiaoDuo Game
  */
 
-namespace app\api\service;
+namespace app\check\service;
 
-use app\api\model\BadWord as BadWordModel;
-header("Access-Control-Allow-Origin:*");
+use app\check\model\BadWord as BadWordModel;
 class BadWord
 {
     /*
@@ -25,7 +24,7 @@ class BadWord
             if ($badWordArr[$i] == "") {
                 continue; //如果关键字为空就跳过本次循环
             }
-            if (strpos($content,trim($badWordArr[$i])) != false){
+            if (strpos('检测内容：'.$content,trim($badWordArr[$i])) != false){
                 return $badWordArr[$i]; //如果匹配到关键字就返回关键字
 //                return true;
             }
