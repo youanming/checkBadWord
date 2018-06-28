@@ -3,7 +3,7 @@
 
 # 运行环境
 - PHP >= 5.6 (开发版本时的版本)
-- thinkPHP 5.x.x
+- ThinkPHP 5.x.x
 - Redis
 - MySQL
 
