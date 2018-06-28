@@ -19,7 +19,7 @@
 # 演示
 HTML 请求[ 演示](http://demo.fpc.cc/bad/index.html)
 
-RESTFul API 风格： [ 演示](http://demo.fpc.cc/bad/api.html)
+RESTFul API： [ 演示](http://demo.fpc.cc/bad/api.html)
 
 
 # 其他
