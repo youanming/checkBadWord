@@ -15,11 +15,11 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'demo_fpc_cc',
+    'database'        => 'root',
     // 用户名
-    'username'        => 'demo_fpc_cc',
+    'username'        => '',
     // 密码
-    'password'        => 'demo_fpc_cc',
+    'password'        => '',
     // 端口
     'hostport'        => '',
     // 连接dsn
