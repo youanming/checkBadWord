@@ -7,8 +7,30 @@
 
 namespace app\api\service;
 
-
+use app\api\model\BadWord as BadWordModel;
+header("Access-Control-Allow-Origin:*");
 class BadWord
 {
+    /*
+     * 敏感词检测
+     * @param string $content 检测的内容
+     * @return true（有敏感词） false（无敏感词），也可根据需求返回关键词
+     */
+    public static function checkBadWord($content){
+        $badWordArr = BadWordModel::getBadWord();
+        if (!$badWordArr) {
+            throw new BadWordException();
+        }
+        for ($i = 0; $i < count($badWordArr) ; $i++){
+            if ($badWordArr[$i] == "") {
+                continue; //如果关键字为空就跳过本次循环
+            }
+            if (strpos($content,trim($badWordArr[$i])) != false){
+                return $badWordArr[$i]; //如果匹配到关键字就返回关键字
+//                return true;
+            }
+        }
+        return false; // 如果没有匹配到关键字就返回 false
+    }
 
 }

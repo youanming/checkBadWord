@@ -8,7 +8,7 @@
 namespace app\api\validate;
 
 
-class ContentValidate
+class ContentValidate extends BaseValidate
 {
 
 }

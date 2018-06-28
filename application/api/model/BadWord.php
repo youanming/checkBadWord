@@ -9,8 +9,9 @@ namespace app\api\model;
 
 
 use think\Cache;
+use think\Model;
 
-class BadWord extends BaseModel
+class BadWord extends Model
 {
     public static function getBadWord() {
         $badWord = Cache::get('bad_word');
@@ -19,11 +20,12 @@ class BadWord extends BaseModel
         }
         $badWord = self::all();
         if ($badWord) {
+            // 把二维数组转换成一维数组
             foreach ($badWord as $k => $v) {
                 $_badWord[] =  $v['word'];
             }
             Cache::set('bad_word', $_badWord, 0);
-            return $badWord;
+            return $_badWord;
         } else {
             // TODO 抛出异常
             return false;

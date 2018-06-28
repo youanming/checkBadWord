@@ -15,7 +15,7 @@ return [
     // +----------------------------------------------------------------------
 
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
     'app_trace'              => false,
     // 应用模式状态
@@ -29,7 +29,7 @@ return [
     // 扩展函数文件
     'extra_file_list'        => [THINK_PATH . 'helper' . EXT],
     // 默认输出类型
-    'default_return_type'    => 'html',
+    'default_return_type'    => 'json',
     // 默认AJAX 数据返回格式,可选json xml ...
     'default_ajax_return'    => 'json',
     // 默认JSONP格式返回的处理方法
@@ -122,6 +122,8 @@ return [
     'template'               => [
         // 模板引擎类型 支持 php think 支持扩展
         'type'         => 'Think',
+        // 默认模板渲染规则 1 解析为小写+下划线 2 全部转换小写
+        'auto_rule'    => 1,
         // 模板路径
         'view_path'    => '',
         // 模板后缀
@@ -156,7 +158,7 @@ return [
     // 显示错误信息
     'show_error_msg'         => false,
     // 异常处理handle类 留空使用 \think\exception\Handle
-    'exception_handle'       => '',
+    'exception_handle'       => 'app\lib\exception\ExceptionHandler',
 
     // +----------------------------------------------------------------------
     // | 日志设置
@@ -164,7 +166,7 @@ return [
 
     'log'                    => [
         // 日志记录方式，内置 file socket 支持扩展
-        'type'  => 'File',
+        'type'  => 'test',  //File为打开写入日志,转移到index.php入口文件
         // 日志保存目录
         'path'  => LOG_PATH,
         // 日志记录级别
@@ -185,14 +187,36 @@ return [
 
     'cache'                  => [
         // 驱动方式
-        'type'   => 'File',
+        'type'   => 'redis',
+        // 服务器地址
+        'host'       => '127.0.0.1',
         // 缓存保存目录
-        'path'   => CACHE_PATH,
+        //'path'   => CACHE_PATH,
         // 缓存前缀
-        'prefix' => '',
+        'prefix' => 'dbh_',
         // 缓存有效期 0表示永久缓存
-        'expire' => 0,
+        'expire' => 2*60*60,
     ],
+
+    /*'cache' =>  [
+        // 使用复合缓存类型
+        'type'  =>  'complex',
+        // 默认使用的缓存
+        'default'   =>  [
+            // 驱动方式
+            'type'   => 'File',
+            // 缓存保存目录
+            'path'   => CACHE_PATH,
+        ],
+        // redis缓存
+        'redis'   =>  [
+            // 驱动方式
+            'type'   => 'redis',
+            // 服务器地址
+            'host'       => '127.0.0.1',
+        ],
+        'expire' => 2*60*60,
+    ],*/
 
     // +----------------------------------------------------------------------
     // | 会话设置
