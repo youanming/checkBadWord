@@ -27,6 +27,6 @@ class BadWord
                 'errorCode' => 10000
             ]);
         }
-        return $result;
+        return ['result' => true, 'msg' => '无敏感词'];
     }
 }

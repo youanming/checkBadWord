@@ -9,7 +9,7 @@ namespace app\lib\exception;
 
 class IsBadWordException extends BaseException
 {
-    public $code = 400;
+    public $code = 202;
     public $msg = '存在非法字符';
     public $errorCode = 20004;
 }

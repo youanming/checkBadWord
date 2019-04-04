@@ -7,6 +7,7 @@
 namespace app\check\service;
 
 use app\check\model\BadWord as BadWordModel;
+use app\lib\exception\BadWordException;
 class BadWord
 {
     /*

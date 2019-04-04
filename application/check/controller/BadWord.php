@@ -7,8 +7,6 @@
 namespace app\check\controller;
 
 use app\check\service\BadWord as BadWordService;
-// 跨域header，根据业务需要，看是否添加
-header("Access-Control-Allow-Origin:*");
 class BadWord
 {
     /*
