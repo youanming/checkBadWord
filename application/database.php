@@ -15,11 +15,19 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
+<<<<<<< HEAD
     'database'        => 'bad_word',
     // 用户名
     'username'        => 'bad_word',
     // 密码
     'password'        => 'HK67jALD3zxGyxtd',
+=======
+    'database'        => 'root',
+    // 用户名
+    'username'        => '',
+    // 密码
+    'password'        => '',
+>>>>>>> 0edbcf430a9f398a8c588e8bf508b2ea5ebad959
     // 端口
     'hostport'        => '',
     // 连接dsn
