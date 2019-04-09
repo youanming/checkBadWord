@@ -1,7 +1,10 @@
 # checkBadWord
+# checkBadWord
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+
 敏感词检测，使用tp5框架
+
 # 运行环境
 - PHP >= 5.6 (开发版本时的版本)
 - ThinkPHP 5.x.x
